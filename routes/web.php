@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LatihanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,9 @@ Route::get('profile', function () {
     return view('pages/profiles', compact('nama','tempat','tgl','jk', 'hobi'));
  });
 
- Route::get('profile2/{makanan}/{minuman}/{harga}/{pemesan?}', function ($makanan,$minuman,$harga,$pemesan = "-") {
-    return view('pages/latihan1', compact('makanan','minuman','harga','pemesan'));
+ Route::get('profile2/{makanan?}/{minuman?}/{cemilan?}/{pemesan?}', function ($makanan = "Tidak Ada",$minuman= "Tidak Ada",$cemilan = "Tidak Ada",$pemesan = "-") {
+    return view('pages/latihan1', compact('makanan','minuman','cemilan','pemesan'));
+    
  });
+
+Route::get('perkenalan/{nama?}/{alamat?}/{umur?}', [LatihanController::class, 'perkenalan']);
