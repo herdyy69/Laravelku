@@ -37,3 +37,8 @@ Route::get('profile', function () {
  });
 
 Route::get('perkenalan/{nama?}/{alamat?}/{umur?}', [LatihanController::class, 'perkenalan']);
+
+Route::get('siswa/{id?}/{nama?}/{age?}', [LatihanController::class, 'siswa']);
+Route::get('dosen', [LatihanController::class, 'dosen']);
+Route::get('televisi', [LatihanController::class, 'televisi']);
+Route::get('shop', [LatihanController::class, 'shop']);
