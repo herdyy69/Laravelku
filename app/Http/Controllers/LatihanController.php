@@ -92,4 +92,55 @@ class LatihanController extends Controller
         ];
         return view('pages.shop', ['belanja'=>$belanja]);
     }
+    function nilai_siswa(){
+        $siswa = 
+        [
+            ['nama_siswa' => 'AGUS', 'jurusan' => 'TKR' ,
+            'nilai' =>
+            [
+                ['matpel' => 'B.INDONESIA', 'nilai' => 80],
+                ['matpel' => 'B.INGGRIS', 'nilai' => 97],
+                ['matpel' => 'PRODUKTIF KEJURUAN', 'nilai' => 67],
+                ['matpel' => 'MATEMATIKA', 'nilai' => 100]
+            ]
+            ],
+            ['nama_siswa' => 'MAHMUD', 'jurusan' => 'TKR' ,
+            'nilai' =>
+            [
+                ['matpel' => 'B.INDONESIA', 'nilai' => 78],
+                ['matpel' => 'B.INGGRIS', 'nilai' => 86],
+                ['matpel' => 'PRODUKTIF KEJURUAN', 'nilai' => 90],
+                ['matpel' => 'MATEMATIKA', 'nilai' => 67]
+            ]
+            ],
+            ['nama_siswa' => 'RENDI',  'jurusan' => 'TSM' ,
+            'nilai' =>
+            [
+                ['matpel' => 'B.INDONESIA', 'nilai' => 90],
+                ['matpel' => 'B.INGGRIS', 'nilai' => 50],
+                ['matpel' => 'PRODUKTIF KEJURUAN', 'nilai' => 65],
+                ['matpel' => 'MATEMATIKA', 'nilai' => 78]
+            ]
+            ],
+            ['nama_siswa' => 'FIRMAN',  'jurusan' => 'RPL' ,
+            'nilai' =>
+            [
+                ['matpel' => 'B.INDONESIA', 'nilai' => 78],
+                ['matpel' => 'B.INGGRIS', 'nilai' => 90],
+                ['matpel' => 'PRODUKTIF KEJURUAN', 'nilai' => 56],
+                ['matpel' => 'MATEMATIKA', 'nilai' => 78]
+            ]
+            ],
+            ['nama_siswa' => 'ABDUL',  'jurusan' => 'RPL' ,
+            'nilai' =>
+            [
+                ['matpel' => 'B.INDONESIA', 'nilai' => 89],
+                ['matpel' => 'B.INGGRIS', 'nilai' => 67],
+                ['matpel' => 'PRODUKTIF KEJURUAN', 'nilai' => 80],
+                ['matpel' => 'MATEMATIKA', 'nilai' => 90]
+            ]
+            ]
+        ];
+        return view('pages.siswa2', ['siswa'=>$siswa]);
+    }
 }

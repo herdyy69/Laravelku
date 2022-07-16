@@ -18,12 +18,12 @@
             @foreach ($belanja['pembelian'] as $item)
            <lI> JENIS {{ $item['jenis'] }} <br> </lI>
            - MERK  : {{ $item['merk'] }} <br>
-           - HARGA : {{ $item['harga'] }}
+           - HARGA : {{ number_format($item['harga'],0,",",".")  }}
            <hr>
             <?php $total += $item['harga']  ?>
+            
             @endforeach
-        @endforeach
-        @if($total > 250 && $total <500)
+        @if($total > 250000 && $total <500000)
         @php 
         $cashback = (5/100) * $total  @endphp
         @elseif($total >=500)
@@ -31,8 +31,10 @@
         $cashback = (10/100) * $total  @endphp
         @else
         @endif 
-        Total Harga : {{ $total }} <br>
-        Cashback : {{ $cashback }}
+        Harga : {{ number_format($total,0,",",".")  }} <br>
+            Cashback : {{ number_format($cashback,0,",",".") }} <br>
+            Total Harga : {{ number_format($total - $cashback,0,",",".")  }}
+        @endforeach
     </fieldset>
 </body>
 </html>
