@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LatihanController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\Task2Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,3 +75,5 @@ Route::get('taskindex/edit_j/{id}/{nama_jabatan}', [TaskController::class, 'edit
 Route::get('taskindex/hapus_k/{id}', [TaskController::class, 'hapus_k']);
 Route::get('taskindex/hapus_b/{id}', [TaskController::class, 'hapus_b']);
 Route::get('taskindex/hapus_j/{id}', [TaskController::class, 'hapus_j']);
+
+Route::get('postindex2', [Task2Controller::class, 'tampil']);

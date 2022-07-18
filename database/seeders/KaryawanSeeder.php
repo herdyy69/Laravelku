@@ -16,7 +16,7 @@ class KaryawanSeeder extends Seeder
     public function run()
     {
         $contoh = [
-            ['nama' => 'HERDYANSAH', 'no_hp'=>'085155338717']
+            ['nama_barang' => 'RINSO', 'no_hp'=>'085155338717']
         ];
         DB::table('karyawans')->insert($contoh);
     }
